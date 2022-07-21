@@ -9,8 +9,10 @@ import Nav from './components/Nav'
 function App() {
   return (
     <div>
-      <h1>Marvel adventure park</h1>
-      <Nav />
+      <div className="Nav">
+        <h1>Marvel adventure park</h1>
+        <Nav />
+      </div>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
