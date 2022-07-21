@@ -1,7 +1,6 @@
-import {useState} from 'react'
-import axios from axios
+import { useState } from 'react'
+//import axios from 'axios'
 import RideCard from '../components/RideCard'
-
 
 const Rides = () => {
   return (
