@@ -11,7 +11,7 @@ const Rides = () => {
   }
   getRides()
   return (
-    <div>
+    <div className="div">
       <h2>Rides</h2>
       <RideCard rides={rides} />
     </div>

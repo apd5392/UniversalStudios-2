@@ -12,7 +12,7 @@ const Restaurants = () => {
   getCafe()
 
   return (
-    <div>
+    <div className="div">
       <h2>Restaurants</h2>
       <RestaurantCard cafes={cafes} />
     </div>

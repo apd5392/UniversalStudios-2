@@ -11,7 +11,7 @@ const Shops = () => {
   }
   getShops()
   return (
-    <div>
+    <div className="div">
       <h2>Stores</h2>
       <ShopCard shops={shops} />
     </div>
