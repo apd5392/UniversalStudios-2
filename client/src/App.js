@@ -5,7 +5,7 @@ import Restaurants from './pages/Restaurants'
 import Rides from './pages/Rides'
 import Shops from './pages/Shops'
 import Nav from './components/Nav'
-const API = 'http.//localhost:3001/'
+const API = 'http.//localhost:3001'
 
 function App() {
   return (

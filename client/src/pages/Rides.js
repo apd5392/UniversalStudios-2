@@ -9,9 +9,9 @@ const Rides = (props) => {
   useEffect(() => {
     const fetchRides = async () => {
       try {
-        const res = await axios.get(`${API}/rides`)
-        setRides(res.data.results)
-        console.log(res.data.results)
+        const res = await axios.get(`http://localhost:3001/rides`)
+        setRides(res.data)
+        console.log(res.data)
       } catch (error) {
         console.error(error)
       }
