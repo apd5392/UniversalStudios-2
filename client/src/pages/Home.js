@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const fetchParkInfo = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/park`)
+        const res = await axios.get(`http://localhost:3001/`)
         setParkInfo(res.data)
         console.log(res.data)
       } catch (error) {
@@ -23,7 +23,7 @@ const Home = () => {
     return (
       <div>
         {parkInfo.map((park) => (
-          <div key={park.name}>
+          <div key={park.name} className="card">
             <h2>{park.name}</h2>
             <h3>Marvel fan? You are at the right place!</h3>
             <h4>Park Hours: {park.parkHours}</h4>
