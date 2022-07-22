@@ -4,7 +4,6 @@ const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
 const { Park, Restaurant, Ride, Shop } = require('./models')
-const routes = require("./routes")
 
 const app = express()
 
@@ -16,9 +15,9 @@ app.get('/rides', async (req, res) => {
   const rides = await Ride.find({})
   res.json(rides)
 })
-app.get('/park', async (req, res) => {
-  const park = await Park.find({})
-  res.json(park)
+app.get('/', async (req, res) => {
+  const parks = await Park.find({})
+  res.json(parks)
 })
 app.get('/restaurants', async (req, res) => {
   const restaurants =  await Restaurant.find({})
