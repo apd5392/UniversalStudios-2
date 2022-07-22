@@ -1,11 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap');
 
 body {
   text-align: center;
   background:rgb(20, 20, 255);
   background-image: url('https://i.pinimg.com/736x/d5/a4/dc/d5a4dc5901092e0a242f1f38a330177e.jpg');
-  color: rgb(4, 0, 255);
+  color: blue;
   font-family: 'Poppins', sans-serif;
+}
+img{
+  width: 650px;
+  border-radius: 45px;
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));;
+}
+.card{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: 'Akshar', sans-serif;
+}
+.card h3{
+  font-size: 30px;
+  padding:10px;
+  margin:25px 25px;
+}
+.card h4{
+  font-size: 20px;
+  margin:10px;
+
+}
+.card p{
+  font-size: 20px;
+  padding: 5px -20px;
+}
+.properties {
+  margin: 5px;
+  padding: 0;
 }
 .Nav{
   background-color: red;
@@ -14,9 +43,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .div{
-  background-color: rgba(255,255,255,0.7);
-  padding:10px;
 
+
+
+}
+.div h2{
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 40px;
+  padding:30px;
 }
 .App-logo {
   height: 40vmin;

@@ -4,13 +4,19 @@ import ShopCard from '../components/ShopCard'
 
 const Shops = () => {
   const [shops, setShops] = useState([])
+  useEffect(() => {
+    const fetchShops = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3001/shops`)
+        console.log(res.data)
+        setShops(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchShops()
+  }, [])
 
-  const getShops = async () => {
-    const res = await axios.get(`http://localhost:3001/shops`)
-    console.log(res.data)
-    setShops(res.data)
-  }
-  getShops()
   return (
     <div className="div">
       <h2>Stores</h2>

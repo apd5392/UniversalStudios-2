@@ -8,9 +8,10 @@ const RestaurantCard =(props)=>{
         <div>
             {
                 props.cafes.map((cafe)=>(
-                    <div key={cafe.name}>
+                    <div key={cafe.name} className='card'>
+                      
                         <h3>{cafe.name}</h3>
-                        <div>
+                        <div className='properties'>
                         <h4>{cafe.type}</h4>
                         <h4>Menu: {cafe.menu}</h4>
                         </div>

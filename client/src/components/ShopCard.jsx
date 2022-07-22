@@ -6,7 +6,7 @@ const ShopCard = (props) =>{
     <div>
                     {
                 props.shops.map((shop)=>(
-                    <div key={shop.name}>
+                    <div key={shop.name} className='card'>
                         <h3>{shop.name}</h3>
                         <p>{shop.about}</p>
                         <img src={shop.images}/>
