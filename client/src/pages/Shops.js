@@ -6,8 +6,9 @@ const Shops = () => {
   const [shops, setShops] = useState([])
 
   const getShops = async () => {
-    const res = await axios.get()
-    setShops(res.data.results)
+    const res = await axios.get(`http://localhost:3001/shops`)
+    console.log(res.data)
+    setShops(res.data)
   }
   getShops()
   return (

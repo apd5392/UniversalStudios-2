@@ -1,5 +1,7 @@
 const ShopCard = (props) =>{
-
+    if (!props.shops) {
+        return <h1>Loading please wait</h1>
+      } else {
     return(
     <div>
                     {
@@ -14,5 +16,6 @@ const ShopCard = (props) =>{
             }
     </div>
     )
+        }
 }
 export default ShopCard
