@@ -3,8 +3,8 @@ const Nav = () => {
     return(
         <div>
             <Link to = '/'>Home</Link>
-            <Link to = '/restaurants'>Restaurants</Link>
             <Link to ='/rides'>Rides</Link>
+            <Link to = '/restaurants'>Restaurants</Link>
             <Link to ='/shops'>Shops</Link>
         </div>
     )

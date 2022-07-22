@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import {useState} from 'react'
-=======
-import { useState } from 'react'
->>>>>>> b63220bc2917afb6ba6fbe18298bf62b87500d6b
 import axios from 'axios'
 import ShopCard from '../components/ShopCard'
 
