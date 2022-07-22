@@ -5,6 +5,7 @@ import Restaurants from './pages/Restaurants'
 import Rides from './pages/Rides'
 import Shops from './pages/Shops'
 import Nav from './components/Nav'
+const API = 'http.//localhost:3001/'
 
 function App() {
   return (
@@ -15,10 +16,10 @@ function App() {
       </div>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/restaurants" element={<Restaurants />} />
-          <Route path="/rides" element={<Rides />} />
-          <Route path="/shops" element={<Shops />} />
+          <Route path="/" element={<Home API={API} />} />
+          <Route path="/restaurants" element={<Restaurants API={API} />} />
+          <Route path="/rides" element={<Rides API={API} />} />
+          <Route path="/shops" element={<Shops API={API} />} />
         </Routes>
       </main>
     </div>

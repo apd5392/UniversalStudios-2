@@ -1,14 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const Home = () => {
+const Home = (props) => {
   const [parkInfo, setParkInfo] = useState([])
+  const API = props.API
+  useEffect(() => {
+    const fetchParkInfo = async () => {
+      try {
+        const res = await axios.get(`${API}/park`)
+        setParkInfo(res.data.results)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    fetchParkInfo()
+  }, [])
 
-  const getParkInfo = async () => {
-    const res = await axios.get()
-    setParkInfo(res.data.results)
-  }
-  getParkInfo()
   return (
     <div>
       {parkInfo.map((park) => (
