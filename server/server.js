@@ -16,19 +16,19 @@ app.get('/rides', async (req, res) => {
   const rides = await Ride.find({})
   res.json(rides)
 })
-app.get('/', async (req, res) => {
+app.get('/park', async (req, res) => {
   const park = await Park.find({})
-  //   res.json(park)
-  console.log(park)
+  res.json(park)
 })
-// app.get('/restaurants', async (req, res) => {
-//   const restaurants = await Restaurant.find({})
-//   res.json(restaurants)
-// })
-// app.get('/shops', async (req, res) => {
-//   const shops = await Shop.find({})
-//   res.json(shops)
-// })
+app.get('/restaurants', async (req, res) => {
+  const restaurants = await Restaurant.find({})
+  res.json(restaurants)
+})
+app.get('/shops', async (req, res) => {
+  const shops = await Shop.find({})
+  res.json(shops)
+  console.log(shops)
+})
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`)

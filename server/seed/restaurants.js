@@ -42,6 +42,7 @@ const main = async () => {
     }
   ]
   await Restaurant.insertMany(restaurant1)
+  console.log('New cafe', restaurant1)
 }
 
 const run = async () => {
