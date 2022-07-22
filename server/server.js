@@ -20,12 +20,10 @@ app.get('/park', async (req, res) => {
   const park = await Park.find({})
   res.json(park)
 })
-app.get('/restaurants', (req, res) => {
-  const restaurants =  Restaurant.find({})
+app.get('/restaurants', async (req, res) => {
+  const restaurants =  await Restaurant.find({})
   res.json(restaurants)
 })
-
-// app.use("/restaurants", routes) // new
 
 app.get('/shops', async (req, res) => {
   const shops = await Shop.find({})
