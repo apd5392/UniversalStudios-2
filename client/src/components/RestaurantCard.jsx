@@ -1,4 +1,9 @@
 const RestaurantCard =(props)=>{
+
+    if (!props.cafes) {
+        return<h1>Loading please wait</h1>
+    }
+    else{
     return(
         <div>
             {
@@ -17,5 +22,6 @@ const RestaurantCard =(props)=>{
             }
         </div>
     )
+        }
     }
     export default RestaurantCard 
