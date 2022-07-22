@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import RestaurantCard from '../components/RestaurantCard'
 
-const Restaurants = (props) => {
+const Restaurants = () => {
   const [cafes, setCafe] = useState([])
-  const API = props.API
 
   useEffect(() => {
     const fetchCafe = async () => {
       try {
-        const res = await axios.get(`${API}/restaurants`)
-        setCafe(res.data.results)
-        console.log(res.data.results)
+        const res = await axios.get(`http://localhost:3001/restaurants`)
+        setCafe(res.data)
+        console.log(res.data)
       } catch (error) {
         console.log(error)
       }
