@@ -1,10 +1,10 @@
 const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
-// const routes = require('./routes')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
 const { Park, Restaurant, Ride, Shop } = require('./models')
+const routes = require("./routes")
 
 const app = express()
 
@@ -20,10 +20,13 @@ app.get('/park', async (req, res) => {
   const park = await Park.find({})
   res.json(park)
 })
-app.get('/restaurants', async (req, res) => {
-  const restaurants = await Restaurant.find({})
+app.get('/restaurants', (req, res) => {
+  const restaurants =  Restaurant.find({})
   res.json(restaurants)
 })
+
+// app.use("/restaurants", routes) // new
+
 app.get('/shops', async (req, res) => {
   const shops = await Shop.find({})
   res.json(shops)
