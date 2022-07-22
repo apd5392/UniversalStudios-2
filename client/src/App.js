@@ -1,7 +1,7 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Restaurants from './pages/Restaurants'
+import Restaurants from './pages/Restaurant'
 import Rides from './pages/Rides'
 import Shops from './pages/Shops'
 import Nav from './components/Nav'
